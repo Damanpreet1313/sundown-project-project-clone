@@ -1,0 +1,209 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    background-color: #efeae3;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    font-family: "matter";
+}
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    position: relative;
+ }
+
+ nav{
+    height: 100px;
+    width: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 3%;
+   
+ }
+
+ #nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+ }
+
+ #nav-part2 h4{
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.162);
+    border-radius: 50px;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+ }
+
+ #nav-part2 h4 a{
+    text-decoration: none;
+    color: black;
+    z-index: 9;
+    position: relative;
+ }
+
+ #nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    transition: all ease 0.4s;
+ }
+
+ #nav-part2 h4:hover::after{
+    bottom: 0;
+}
+
+ #nav-part2 h4 a:hover{
+    background-color: black;
+    color: white;
+ }
+
+
+#center{
+    height: 65vh;
+    width: 96%;
+    margin-left: 2%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; 
+    border-bottom: 2px solid black; 
+    padding-bottom: 2.5vw; 
+}
+
+#left h3{
+    width: 30vw;
+    font-size: 2vw;
+    line-height: 2vw;
+}
+
+#center h1{
+    font-size: 10vw;
+    line-height: 8vw;
+    text-align: right;
+}
+#page1 video{
+    position: relative;
+    border-radius: 30px;
+    margin-top: 5vw;
+    width: 96%;
+    margin-left: 2.5%;
+}
+
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw; 
+    right: 0;
+    top: 72vh; 
+}
+#hero1{
+    position: absolute;
+    background-color: #fe320a;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    height: 100%;
+    width: 100%;
+}
+#hero2{
+    position: absolute;
+    background-color: #fe320a;
+    border-radius: 50%;
+    filter: blur(20px);
+    height: 30vw;
+    width: 30vw;
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#hero3{
+    position: absolute;
+    background: linear-gradient(#fe320a,#fe330af4);
+    border-radius: 50%;
+    filter: blur(20px);
+    height: 30vw;
+    width: 30vw;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(-10%,10%);
+    }
+    to{
+            transform: translate(10%,-10%);
+    }
+}
+
+
+@keyframes anime2 {
+    from{
+        transform: translate(5%,-5%);
+    }
+    to{
+            transform: translate(-20%,20%);
+    }
+}
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto ;
+    margin-top: 8vw;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+#con{
+    white-space: nowrap;
+    display: inline-block;
+    animation: move 10s infinite linear;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    position: relative;
+}
+
+#moving-text h1{
+    font-size: 6vw;
+    display: inline-block;
+}
+
+#gola{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #fe320a;
+    display: inline-block;
+}
+
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
